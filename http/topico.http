@@ -1,0 +1,44 @@
+###
+
+GET http://localhost:8080/topicos
+
+###
+
+GET http://localhost:8080/topicos/1 HTTP/1.1
+
+###
+
+POST http://localhost:8080/topicos HTTP/1.1
+content-type: application/json
+
+{
+    "titulo": "Duvida Spring Boot 2",
+    "mensagem": "Configuração do banco de dados 2",
+    "idCurso": 1,
+    "idAutor":1
+}
+
+###
+
+PUT http://localhost:8080/topicos/1 HTTP/1.1
+content-type: application/json
+
+{
+    "titulo": "Duvida Spring Boot 2",
+    "mensagem": "Configuração do banco de dados 2"
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
