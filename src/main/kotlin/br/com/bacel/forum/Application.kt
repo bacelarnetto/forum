@@ -4,8 +4,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
 
 @SpringBootApplication
-class ForumApplication
+class Application
 
 fun main(args: Array<String>) {
-	runApplication<ForumApplication>(*args)
+    runApplication<Application>(*args)
 }

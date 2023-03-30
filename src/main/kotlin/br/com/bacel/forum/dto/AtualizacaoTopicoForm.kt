@@ -3,7 +3,7 @@ package br.com.bacel.forum.dto
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.Size
 
-data class AtualizacaoTopicoForm (
+data class AtualizacaoTopicoForm(
 
     var id: Long,
 
@@ -13,5 +13,5 @@ data class AtualizacaoTopicoForm (
 
     @field:NotBlank
     @field:Size(min = 3, max = 300)
-    val mensagem: String
+    val mensagem: String,
 )

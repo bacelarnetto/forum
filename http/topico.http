@@ -1,34 +1,34 @@
-###
-
-GET http://localhost:8080/topicos
-
-###
-
-GET http://localhost:8080/topicos/1 HTTP/1.1
-
-###
-
+###{ POST /topicos }
 POST http://localhost:8080/topicos HTTP/1.1
 content-type: application/json
 
 {
-    "titulo": "Duvida Spring Boot 2",
-    "mensagem": "Configuração do banco de dados 2",
-    "idCurso": 1,
-    "idAutor":1
+  "titulo": "Duvida Spring Boot 2",
+  "mensagem": "Configuração do banco de dados 2",
+  "idCurso": 1,
+  "idAutor":1
 }
 
-###
-
+###{ PUT /topicos }
 PUT http://localhost:8080/topicos/1 HTTP/1.1
 content-type: application/json
 
 {
-    "titulo": "Duvida Spring Boot 2",
-    "mensagem": "Configuração do banco de dados 2"
+  "titulo": "Duvida Spring Boot 3",
+  "mensagem": "Configuração do banco de dados 4"
 }
 
+###{ GET /topicos }
+GET http://localhost:8080/topicos
 
+###{ GET /topicos/:id }
+GET http://localhost:8080/topicos/1 HTTP/1.1
+
+###{ DELETE /topicos/:id }
+DELETE http://localhost:8080/topicos/1 HTTP/1.1
+content-type: application/json
+
+###
 
 
 
