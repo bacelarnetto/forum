@@ -6,7 +6,7 @@ import javax.validation.constraints.Size
 
 data class NovoTopicoForm (
     @field:NotBlank
-    @field:Size(min = 3, max = 100)
+    @field:Size(min = 3, max = 100, message = "Titulo deve ter entre 5 e 100 caracteres!")
     val titulo: String,
 
     @field:NotBlank
