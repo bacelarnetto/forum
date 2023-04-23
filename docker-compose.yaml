@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  mysql:
+    image: 'mysql:latest'
+    container_name: mysql-container-forum-db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=forum
+      - MYSQL_PASSWORD=root
+    ports:
+      - '3308:3306'
+    volumes:
+      - datavolume_forum_mysql:/data/mysql
+volumes:
+  datavolume_forum_mysql:
