@@ -2,6 +2,7 @@ package br.com.bacel.forum.controller
 
 import br.com.bacel.forum.dto.AtualizacaoTopicoForm
 import br.com.bacel.forum.dto.NovoTopicoForm
+import br.com.bacel.forum.dto.TopicoPorCategoriaDto
 import br.com.bacel.forum.dto.TopicoView
 import br.com.bacel.forum.service.TopicoService
 import org.springframework.cache.annotation.CacheEvict
@@ -81,5 +82,10 @@ class TopicoController(private val service: TopicoService) {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     fun deletar(@PathVariable id: Long) {
         return service.deletar(id)
+    }
+
+    @GetMapping("/relatorio")
+    fun buscarRelatorio(): List<TopicoPorCategoriaDto> {
+        return service.buscarRelatorio()
     }
 }

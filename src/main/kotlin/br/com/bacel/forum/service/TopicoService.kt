@@ -2,6 +2,7 @@ package br.com.bacel.forum.service
 
 import br.com.bacel.forum.dto.AtualizacaoTopicoForm
 import br.com.bacel.forum.dto.NovoTopicoForm
+import br.com.bacel.forum.dto.TopicoPorCategoriaDto
 import br.com.bacel.forum.dto.TopicoView
 import br.com.bacel.forum.exception.NotFoundException
 import br.com.bacel.forum.mapper.TopicoFormMapper
@@ -63,5 +64,9 @@ class TopicoService(
 
     fun deletar(id: Long) {
         topicoRepository.deleteById(id)
+    }
+
+    fun buscarRelatorio() : List<TopicoPorCategoriaDto>{
+        return topicoRepository.getRelatorio()
     }
 }

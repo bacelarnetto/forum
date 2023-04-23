@@ -5,7 +5,7 @@ content-type: application/json
 {
   "titulo": "CACHE",
   "mensagem": "Configuração de SOCKET",
-  "idCurso": 1,
+  "idCurso": 2,
   "idAutor":1
 }
 
@@ -29,6 +29,9 @@ GET http://localhost:8080/topicos?sort=id,desc&size=2&page=0
 
 ###{ GET /topicos/:id }
 GET http://localhost:8080/topicos/2 HTTP/1.1
+
+###{ GET /topicos/relatorio  }
+GET http://localhost:8080/topicos/relatorio HTTP/1.1
 
 ###{ DELETE /topicos/:id }
 DELETE http://localhost:8080/topicos/2 HTTP/1.1
