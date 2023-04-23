@@ -3,7 +3,7 @@ POST http://localhost:8080/topicos HTTP/1.1
 content-type: application/json
 
 {
-  "titulo": "SOCKET",
+  "titulo": "CACHE",
   "mensagem": "Configuração de SOCKET",
   "idCurso": 1,
   "idAutor":1
