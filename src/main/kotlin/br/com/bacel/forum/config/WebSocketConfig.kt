@@ -17,10 +17,12 @@ import org.springframework.web.socket.config.annotation.WebSocketMessageBrokerCo
 class WebSocketConfig : WebSocketMessageBrokerConfigurer {
 
     override fun registerStompEndpoints(registry: StompEndpointRegistry) {
-        registry.addEndpoint("/chat")
-            .setAllowedOrigins("*").withSockJS();
-        registry.addEndpoint("/ws")
-            .setAllowedOrigins("*").withSockJS();
+        registry.addEndpoint("/ws/chat")
+            .setAllowedOrigins("*")
+            .withSockJS();
+        registry.addEndpoint("/ws/user")
+            .setAllowedOrigins("*")
+            .withSockJS();
     }
 
     override fun configureMessageBroker(registry: MessageBrokerRegistry) {

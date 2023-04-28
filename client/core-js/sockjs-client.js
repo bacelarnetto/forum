@@ -1,7 +1,7 @@
 const SockJS = require('sockjs-client');
 const Stomp = require('stompjs');
 
-const socket = new SockJS('http://localhost:8080/chat');
+const socket = new SockJS('http://localhost:8080/ws/chat');
 const stompClient = Stomp.over(socket);
 
 stompClient.connect({}, (frame) => {
@@ -13,6 +13,6 @@ stompClient.connect({}, (frame) => {
         console.log('greetings: ' + greeting.body);
     });
 
-    stompClient.send('/app/chat', {}, JSON.stringify({name: 'Tammie'}));
+    stompClient.send('/app/chat', {}, JSON.stringify({name: 'Admin'}));
     stompClient.send('/app/chat', {}, JSON.stringify({name: 'Josh'}));
 });

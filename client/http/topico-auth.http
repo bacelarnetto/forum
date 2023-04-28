@@ -1,3 +1,13 @@
+###{ POST /login }
+POST /login HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
+
+{
+    "username": "admin@admin.com",
+    "password": "admin"
+}
+
 ###{ POST /topicos }
 POST http://localhost:8080/topicos HTTP/1.1
 content-type: application/json
@@ -20,23 +30,28 @@ content-type: application/json
 
 ###{ GET /topicos }
 GET http://localhost:8080/topicos
-Authorization: Basic YWRtaW5AYWRtaW4uY29tOmFkbWlu
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgyNjU3OTU5fQ.RLmskmKiyVvWN9gKu6NJ-YSNr3s93dpjtqENt1ZiIx-xdZFE0gLATVG1H_8JAZA8N-W_N8ArZfxU81USJRmllg
 
 ###{ GET /topicos?nomeCurso=? }
 GET http://localhost:8080/topicos?nomeCurso=Kotlin
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgyNjU3OTU5fQ.RLmskmKiyVvWN9gKu6NJ-YSNr3s93dpjtqENt1ZiIx-xdZFE0gLATVG1H_8JAZA8N-W_N8ArZfxU81USJRmllg
 
 ###{ GET /topicos?paginacao }
 GET http://localhost:8080/topicos?sort=id,desc&size=2&page=0
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgyNjU3OTU5fQ.RLmskmKiyVvWN9gKu6NJ-YSNr3s93dpjtqENt1ZiIx-xdZFE0gLATVG1H_8JAZA8N-W_N8ArZfxU81USJRmllg
 
 ###{ GET /topicos/:id }
 GET http://localhost:8080/topicos/2 HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgyNjU3OTU5fQ.RLmskmKiyVvWN9gKu6NJ-YSNr3s93dpjtqENt1ZiIx-xdZFE0gLATVG1H_8JAZA8N-W_N8ArZfxU81USJRmllg
 
 ###{ GET /topicos/relatorio  }
 GET http://localhost:8080/topicos/relatorio HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgyNjU3OTU5fQ.RLmskmKiyVvWN9gKu6NJ-YSNr3s93dpjtqENt1ZiIx-xdZFE0gLATVG1H_8JAZA8N-W_N8ArZfxU81USJRmllg
 
 ###{ DELETE /topicos/:id }
 DELETE http://localhost:8080/topicos/2 HTTP/1.1
 content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgyNjU3OTU5fQ.RLmskmKiyVvWN9gKu6NJ-YSNr3s93dpjtqENt1ZiIx-xdZFE0gLATVG1H_8JAZA8N-W_N8ArZfxU81USJRmllg
 
 ###
 
