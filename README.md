@@ -6,7 +6,7 @@ projeto spring boot com kotlin<br/>
 `➜ cd forum/`<br/><br/>
 2 - Instalar o projeto <b>forum</b>. Usar o comando abaixo.<br/>
 `➜ mvn clean install -Pprod`
-##### Obs: Estou usando o Docker como meu ambiente de produção para exercitar a questões de configuração de profiles do spring<br/><br/>
+###### Obs: Estou usando o Docker como meu ambiente de produção para exercitar a questões de configuração de profiles do spring<br/><br/>
 3 - Executar o projeto via docker-compose.<br/>
 `➜ docker-compose up -d`<br/><br/>
 URL: http://localhost:8080<br/><br/>
