@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    # Api vai rodar dentro do docker e vai usar a mesma rede, por isso, a mesma deve usar a porta
+    # interna "3306" no lugar de "3308" e na url usar "mysql-forum-db" que é o nome do container
+    # no lugar de "localhost". Configuração baseada no arquivo docker-compose.yaml
+    url: jdbc:mysql://mysql-forum-db:3306/forum
+    username: root
+    password: root
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    show-sql: true
+    open-in-view: false
+    #generate-ddl: true
+    properties:
+      hibernate:
+        format_sql: true
+jwt:
+  secret: secreto
