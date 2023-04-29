@@ -14,3 +14,4 @@ spring:
         format_sql: true
 jwt:
   secret: secreto
+  expiration: 120000
