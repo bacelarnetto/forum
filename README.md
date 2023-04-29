@@ -2,14 +2,11 @@
 CURSO DE KOTLIN ALURA<br/>
 projeto spring boot com kotlin<br/>
 ## Executando o projeto no docker.
-1 - Instalar o projeto <b>commons-core-lib</b>. Usar o comando abaixo.<br/>
-`➜ mvn clean install`<br/><br/>
-2 - Instalar o projeto <b>commons-app-lib</b>. Usar o comando abaixo.<br/>
-`➜ mvn clean install`<br/><br/>
-3 - Instalar o projeto <b>forum</b>. Usar o comando abaixo.<br/>
-`➜ mvn clean install -Pprod`<br/><br/>
-4 - Executar o projeto via docker-compose.<br/>
+1 - Usando linha de comando, entra na dentro do diretório da api. 
 `➜ cd forum/`<br/>
+2 - Instalar o projeto <b>forum</b>. Usar o comando abaixo.<br/>
+`➜ mvn clean install -Pprod`<br/><br/>
+3 - Executar o projeto via docker-compose.<br/>
 `➜ docker-compose up -d`<br/><br/>
 URL: http://localhost:8080<br/><br/>
 
