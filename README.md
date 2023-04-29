@@ -9,8 +9,8 @@ projeto spring boot com kotlin<br/>
 3 - Instalar o projeto <b>forum</b>. Usar o comando abaixo.<br/>
 `mvn clean install -Pprod`<br/><br/>
 4 - Executar o projeto via docker-compose.<br/>
-`cd forum/docker/`<br/>
-`docker-compose up`<br/><br/>
+`cd forum/`<br/>
+`docker-compose up -d`<br/><br/>
 URL: http://localhost:8080<br/><br/>
 
 ### Observações
