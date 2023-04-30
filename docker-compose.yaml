@@ -1,7 +1,7 @@
 version: '3.3'
 services:
   mysql-forum-db:
-    image: 'mysql:latest'
+    image: 'mysql:8.0.32'
     container_name: mysql-forum-db
     environment:
       - MYSQL_ROOT_PASSWORD=root

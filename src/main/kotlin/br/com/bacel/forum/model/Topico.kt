@@ -1,6 +1,7 @@
 package br.com.bacel.forum.model
 
 import java.time.LocalDateTime
+import java.time.ZoneOffset
 import javax.persistence.*
 
 @Entity
@@ -9,7 +10,8 @@ data class Topico (
     val id: Long? = null,
     var titulo: String,
     var mensagem: String,
-    val dataCriacao: LocalDateTime = LocalDateTime.now(),
+    val dataCriacao: LocalDateTime = LocalDateTime.now(ZoneOffset.UTC),
+    var dataAlteracao: LocalDateTime? = null,
     @ManyToOne
     val curso: Curso,
     @ManyToOne

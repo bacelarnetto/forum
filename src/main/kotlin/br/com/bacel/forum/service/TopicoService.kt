@@ -7,13 +7,13 @@ import br.com.bacel.forum.dto.TopicoView
 import br.com.bacel.forum.exception.NotFoundException
 import br.com.bacel.forum.mapper.TopicoFormMapper
 import br.com.bacel.forum.mapper.TopicoViewMapper
-import br.com.bacel.forum.model.Topico
 import br.com.bacel.forum.repository.TopicoRepository
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
-import java.util.stream.Collectors
-import kotlin.collections.ArrayList
+import java.time.LocalDateTime
+import java.time.ZoneOffset
+
 
 @Service
 class TopicoService(
@@ -59,6 +59,7 @@ class TopicoService(
 
         topico.titulo = form.titulo
         topico.mensagem = form.mensagem
+        topico.dataAlteracao = LocalDateTime.now(ZoneOffset.UTC)
         return topicoViewMapper.map(topico)
     }
 

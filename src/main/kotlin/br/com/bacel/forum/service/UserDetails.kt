@@ -11,6 +11,7 @@ class UserDetails(
     override fun getPassword() = usuario.password
 
     override fun getUsername() = usuario.email
+
     override fun isAccountNonExpired() = true
 
     override fun isAccountNonLocked() = true
