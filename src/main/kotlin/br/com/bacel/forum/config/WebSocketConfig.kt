@@ -27,8 +27,7 @@ class WebSocketConfig : WebSocketMessageBrokerConfigurer {
 
     override fun configureMessageBroker(registry: MessageBrokerRegistry) {
         registry.setApplicationDestinationPrefixes("/app")
-        registry.enableSimpleBroker("/topic", "/queue", "/user")
-        registry.setUserDestinationPrefix("/user/")
+        registry.enableSimpleBroker("/topic", "/queue")
     }
 
 

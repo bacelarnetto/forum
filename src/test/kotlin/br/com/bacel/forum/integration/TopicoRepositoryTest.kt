@@ -51,4 +51,11 @@ class TopicoRepositoryTest{
         assertThat(relatorio.first()).isExactlyInstanceOf(TopicoPorCategoriaDto::class.java)
     }
 
+    @Test
+    fun `deve buscar um topico por nome`() {
+        topicoRepository.save(topico)
+        val resultado = topicoRepository.findByCursoNome(nomeCurso = "Kotlin", paginacao = paginacao)
+        assertThat(resultado.totalElements).isEqualTo(1)
+    }
+
 }
