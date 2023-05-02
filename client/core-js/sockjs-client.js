@@ -1,7 +1,7 @@
 const SockJS = require('sockjs-client');
 const Stomp = require('stompjs');
 
-const socket = new SockJS('http://localhost:8089/ws/chat');
+const socket = new SockJS('http://localhost:8080/ws/chat');
 const stompClient = Stomp.over(socket);
 
 stompClient.connect({}, () => {
