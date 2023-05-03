@@ -19,4 +19,4 @@ spring:
     port: 6380
 jwt:
   secret: secreto
-  expiration: 360000
+  expiration: 480000
