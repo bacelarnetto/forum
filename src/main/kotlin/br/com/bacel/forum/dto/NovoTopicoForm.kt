@@ -1,5 +1,6 @@
 package br.com.bacel.forum.dto
 
+import java.io.Serializable
 import javax.validation.constraints.NotBlank
 import javax.validation.constraints.NotNull
 import javax.validation.constraints.Size
@@ -18,4 +19,4 @@ data class NovoTopicoForm (
 
     @field:NotNull
     val idAutor: Long
-)
+): Serializable

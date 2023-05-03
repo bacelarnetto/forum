@@ -29,10 +29,22 @@ services:
       - forum-network
     links:
       - mysql-forum-db
+      - redis-forum
     depends_on:
       - mysql-forum-db
+      - redis-forum
+
+  redis-forum:
+    image: 'redis:bullseye'
+    container_name: redis-forum
+    ports:
+      - '6380:6379'
+    volumes:
+      - datavolume_forum_redis:/var/lib/redis
+
 networks:
   forum-network:
     driver: bridge
 volumes:
   datavolume_forum_mysql:
+  datavolume_forum_redis:

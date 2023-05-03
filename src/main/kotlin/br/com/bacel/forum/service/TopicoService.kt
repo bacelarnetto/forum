@@ -8,6 +8,8 @@ import br.com.bacel.forum.exception.NotFoundException
 import br.com.bacel.forum.mapper.TopicoFormMapper
 import br.com.bacel.forum.mapper.TopicoViewMapper
 import br.com.bacel.forum.repository.TopicoRepository
+import org.springframework.cache.annotation.CacheEvict
+import org.springframework.cache.annotation.Cacheable
 import org.springframework.data.domain.Page
 import org.springframework.data.domain.Pageable
 import org.springframework.stereotype.Service
@@ -26,6 +28,7 @@ class TopicoService(
         const val NOT_FOUND_MESSAGE = "TOPICO NÃO ENCONTRADO"
     }
 
+    @Cacheable("topicos")
     fun listar(
         nomeCurso: String?,
         paginacao : Pageable
@@ -47,12 +50,14 @@ class TopicoService(
         return topicoViewMapper.map(topico)
     }
 
+    @CacheEvict(value = ["topicos"], allEntries = true)
     fun cadastrar(form: NovoTopicoForm): TopicoView {
         val topico = topicoFormMapper.map(form)
         topicoRepository.save(topico)
         return topicoViewMapper.map(topico)
     }
 
+    @CacheEvict(value = ["topicos"], allEntries = true)
     fun atualizar(form: AtualizacaoTopicoForm): TopicoView {
         val topico = topicoRepository.findById(form.id)
             .orElseThrow{NotFoundException(NOT_FOUND_MESSAGE)}
@@ -63,6 +68,8 @@ class TopicoService(
         return topicoViewMapper.map(topico)
     }
 
+
+    @CacheEvict(value = ["topicos"], allEntries = true)
     fun deletar(id: Long) {
         topicoRepository.deleteById(id)
     }

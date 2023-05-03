@@ -15,6 +15,11 @@ spring:
     properties:
       hibernate:
         format_sql: true
+  cache:
+    type: redis
+  redis:
+    host: localhost
+    port: 6380
 jwt:
   secret: secreto
   expiration: 240000
