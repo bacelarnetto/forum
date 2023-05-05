@@ -1,6 +1,7 @@
 package br.com.bacel.forum.controller
 
 import br.com.bacel.forum.config.JWTUtil
+import br.com.bacel.forum.configuration.DatabaseContainerConfiguration
 import br.com.bacel.forum.model.Role
 import br.com.bacel.forum.model.UsuarioTest
 import org.junit.jupiter.api.BeforeEach
@@ -13,9 +14,11 @@ import org.springframework.test.web.servlet.get
 import org.springframework.test.web.servlet.setup.DefaultMockMvcBuilder
 import org.springframework.test.web.servlet.setup.MockMvcBuilders
 import org.springframework.web.context.WebApplicationContext
+import org.testcontainers.junit.jupiter.Testcontainers
 
+@Testcontainers
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-class TopicoControllerTest {
+class TopicoControllerTest : DatabaseContainerConfiguration() {
 
     @Autowired
     private lateinit var webApplicationContext: WebApplicationContext

@@ -19,14 +19,10 @@ abstract class DatabaseContainerConfiguration {
             withReuse(true)
         }
 
-        //código omitido
-
-        @Container
-        private val redisContainer = GenericContainer<Nothing>("redis:latest").apply {
-            withExposedPorts(6379)
-        }
-
-//código omitido
+         @Container
+         private val redisContainer = GenericContainer<Nothing>("redis:latest").apply {
+             withExposedPorts(6379)
+         }
 
         @JvmStatic
         @DynamicPropertySource
