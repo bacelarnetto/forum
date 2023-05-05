@@ -5,5 +5,5 @@ CREATE TABLE curso(
     PRIMARY KEY (id)
 );
 
-INSERT INTO curso(nome, categoria) VALUES ('Kotlin', 'PROGRAMACAO');
+INSERT INTO curso(nome, categoria) VALUES ('Kotlin', 'Programacao');
 INSERT INTO curso(nome, categoria) VALUES ('HTML', 'Front-end');

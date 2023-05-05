@@ -5,4 +5,4 @@ CREATE TABLE role(
 );
 
 INSERT INTO role (id, nome) VALUES  (1, 'LEITURA_ESCRITA');
-
+INSERT INTO role (id, nome) VALUES  (2, 'ADMIN');

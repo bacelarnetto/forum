@@ -5,4 +5,5 @@ CREATE TABLE usuario(
     PRIMARY KEY (id)
 );
 
+INSERT INTO usuario(nome, email) VALUES ('Ana da Silva', 'ana@gmail.com');
 INSERT INTO usuario(nome, email) VALUES ('admin', 'admin@admin.com');

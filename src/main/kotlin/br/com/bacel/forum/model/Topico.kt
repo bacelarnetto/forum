@@ -1,5 +1,6 @@
 package br.com.bacel.forum.model
 
+import java.io.Serializable
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 import javax.persistence.*
@@ -17,7 +18,9 @@ data class Topico (
     @ManyToOne
     val autor: Usuario,
     @Enumerated(value = EnumType.STRING)
-    val status: StatusTopico = StatusTopico.NAO_RESPONDIDO,
+    val status: StatusTopico,
     @OneToMany(mappedBy = "topico")
-    val resposta: List<Resposta> = ArrayList()
- )
+    val respostas: List<Resposta> = ArrayList()
+ ): Serializable
+
+

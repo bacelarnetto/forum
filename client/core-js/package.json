@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "bcrypt": "^5.1.0",
     "btoa": "^1.2.1",
     "sockjs-client": "^1.6.1",
     "stompjs": "^2.3.3"

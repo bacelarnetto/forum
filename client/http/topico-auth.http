@@ -4,26 +4,26 @@ Host: localhost:8080
 Content-Type: application/json
 
 {
-    "username": "admin@admin.com",
-    "password": "admin"
+    "username": "ana@gmail.com",
+    "password": "123456"
 }
 
 ###{ POST /topicos }
 POST http://localhost:8080/topicos HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgzMTU1NDkxfQ.ysdDqHfqU2WkjjOcULoCr_bkktd1ESP8mn7oPk53uqGf9QpUVNiFNdw-NDdTXPoIklejuKNtbC6_LuqNlMD3Ew
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmFAZ21haWwuY29tIiwicm9sZSI6W3siaWQiOjEsIm5vbWUiOiJMRUlUVVJBX0VTQ1JJVEEiLCJhdXRob3JpdHkiOiJMRUlUVVJBX0VTQ1JJVEEifV0sImV4cCI6MTY4MzIxNzQzMH0.wam690BJJjqOA7iP6x3wSrL7e9d8b7wPQKP0MffbnCkgQzi94x-FP1n3Cz-sTbheXu2oVgd-PihjsP0yWjx_8A
 
 {
-  "titulo": "CACHE do REDIS",
-  "mensagem": "Configuração de CACHE do REDIS",
-  "idCurso": 2,
+  "titulo": "Duvida sobre kotlin",
+  "mensagem": "Para que serve extension functions?",
+  "idCurso": 1,
   "idAutor":1
 }
 
 ###{ PUT /topicos }
 PUT http://localhost:8080/topicos/1 HTTP/1.1
 content-type: application/json
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgzMTU1NDkxfQ.ysdDqHfqU2WkjjOcULoCr_bkktd1ESP8mn7oPk53uqGf9QpUVNiFNdw-NDdTXPoIklejuKNtbC6_LuqNlMD3Ew
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmFAZ21haWwuY29tIiwicm9sZSI6W3siaWQiOjEsIm5vbWUiOiJMRUlUVVJBX0VTQ1JJVEEiLCJhdXRob3JpdHkiOiJMRUlUVVJBX0VTQ1JJVEEifV0sImV4cCI6MTY4MzIwNDMwOX0.VL0OaJV_Z2bQ4HPU2LN4RIeO8MCRC7emADxDHsjBj1ccIYDW25MZ-NJnPF3PwNebQGukAYbbAUyc2TQBrIzfAg
 
 {
   "titulo": "Duvida Spring Boot 3",
@@ -32,7 +32,8 @@ Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb
 
 ###{ GET /topicos }
 GET http://localhost:8080/topicos
-Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgzMTU1NjQ0fQ.m_WfNQTEhT3dxLcDi0Pa3YJbzI0X8tx5hQn49vrblWf3oHXas-nL3Wvy3h7wvFfKPQZfp5FPU9Oz4niPo9V6Pg
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhbmFAZ21haWwuY29tIiwicm9sZSI6W3siaWQiOjEsIm5vbWUiOiJMRUlUVVJBX0VTQ1JJVEEiLCJhdXRob3JpdHkiOiJMRUlUVVJBX0VTQ1JJVEEifV0sImV4cCI6MTY4MzIxODU2N30.6mr7Cvt0hEgM5mWHr6xRjxk6WWsoyikOM9pzNpnOGbw8P6uu620znuoQUgW6gsXePE8IuGpuhmaXivfXaSsBJw
+
 
 ###{ GET /topicos?nomeCurso=? }
 GET http://localhost:8080/topicos?nomeCurso=Kotlin
@@ -55,17 +56,30 @@ DELETE http://localhost:8080/topicos/2 HTTP/1.1
 content-type: application/json
 Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgyNjU3OTU5fQ.RLmskmKiyVvWN9gKu6NJ-YSNr3s93dpjtqENt1ZiIx-xdZFE0gLATVG1H_8JAZA8N-W_N8ArZfxU81USJRmllg
 
-###
+###{ POST /respostas }
+POST http://localhost:8080/respostas HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6MSwibm9tZSI6IkxFSVRVUkFfRVNDUklUQSIsImF1dGhvcml0eSI6IkxFSVRVUkFfRVNDUklUQSJ9XSwiZXhwIjoxNjgzMjEzOTc4fQ.iSSZn6TYM-2UENpxqcGbqSy9Ntch1LcCWi-aNhwIaV-E_b_UiJzVFDg4IAxXG-1kbH0PDDHn6hWYhB4WwAYgWg
 
+{
+   "id":1,
+   "mensagem":"Teste",
+   "idAutor": 1,
+   "idTopico": 2,
+   "solucao":false
+}
 
+###{ POST /login }
+POST /login HTTP/1.1
+Host: localhost:8080
+Content-Type: application/json
 
+{
+    "username": "admin@admin.com",
+    "password": "admin"
+}
 
-
-
-
-
-
-
-
-
+###{ GET /relatorios }
+GET http://localhost:8080/relatorios
+Authorization: Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJhZG1pbkBhZG1pbi5jb20iLCJyb2xlIjpbeyJpZCI6Miwibm9tZSI6IkFETUlOIiwiYXV0aG9yaXR5IjoiQURNSU4ifV0sImV4cCI6MTY4MzI4Mjc4MX0.xcbkYRekk3coCdiGxHchsiLoMiL4cctfqH6z1-p5xMPdDGLDOUqTdDgST9t3rksLKvMsPptSYm9zMJxOGycSxg
 

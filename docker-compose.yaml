@@ -41,6 +41,20 @@ services:
       - '6380:6379'
     volumes:
       - datavolume_forum_redis:/var/lib/redis
+    networks:
+      - forum-network
+  
+  redis-commander-forum:
+    container_name: redis-commander-forum
+    hostname: redis-commander
+    image: ghcr.io/joeferner/redis-commander:latest
+    restart: always
+    environment:
+    - REDIS_HOSTS=local:redis-forum:6379
+    ports:
+    - "8090:8081"
+    networks:
+      - forum-network
 
 networks:
   forum-network:

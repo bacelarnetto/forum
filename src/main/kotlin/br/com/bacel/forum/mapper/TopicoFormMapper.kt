@@ -1,6 +1,7 @@
 package br.com.bacel.forum.mapper
 
 import br.com.bacel.forum.dto.NovoTopicoForm
+import br.com.bacel.forum.model.StatusTopico
 import br.com.bacel.forum.model.Topico
 import br.com.bacel.forum.service.CursoService
 import br.com.bacel.forum.service.UsuarioService
@@ -17,7 +18,8 @@ class TopicoFormMapper(
             titulo = t.titulo,
             mensagem = t.mensagem,
             curso = cursoService.buscarPorId(t.idCurso),
-            autor = usuarioService.buscarPorId(t.idAutor)
+            autor = usuarioService.buscarPorId(t.idAutor),
+            status = StatusTopico.NAO_RESPONDIDO
         )
     }
 
