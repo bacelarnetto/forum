@@ -23,12 +23,20 @@ jobs:
         with:
           java-version: '17'
 
-      - name: Cache de deps
+      - name: Cache de deps java
         uses: actions/cache@v1
         with:
           path: ~/.m2
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
+      
+      - name: Cache dependencies node
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}-npm-${{ hashFiles('**/npm-shrinkwrap.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
       - name: Executar testes
         run: mvn -B test
