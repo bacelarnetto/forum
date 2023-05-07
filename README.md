@@ -60,4 +60,4 @@ URL: http://localhost:8089<br/><br/>
 * Integração Contínua
 * Entrega Contínua
 * Deploy com Pipeline
-
+* WebSockets
