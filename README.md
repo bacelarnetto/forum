@@ -1,6 +1,6 @@
 # API SPRING BOOT FORUM
 CURSO DE KOTLIN ALURA<br/>
-projeto spring boot com kotlin<br/>
+Projeto spring boot com kotlin<br/>
 ## Executando o projeto no docker.
 1 - Usando linha de comando, entra na dentro do diretório da api.<br/>
 `➜ cd forum/`<br/><br/>
